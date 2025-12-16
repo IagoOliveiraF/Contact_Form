@@ -28,6 +28,7 @@
 /*============BODY============*/
 body {
     width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,7 +45,6 @@ body {
 /*============WRAPPER============*/
 .wrapper {
     padding: 2rem;
-    margin-top: 2rem;
     border-radius: 15px;
     background-color: var(--Color_White);
 
@@ -121,41 +121,41 @@ body {
 }
 
 /*============CONTAINER__FOOTER============*/
-.container__footer{
+.container__footer {
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    margin-bottom: 4rem;
+    margin-top: 1rem;
 }
 
-.container__footer .container__footer__messageContent{
+.container__footer .container__footer__messageContent {
     display: flex;
     flex-direction: column;
-   
+
 }
 
-.container__footer .container__footer__messageContent label{
+.container__footer .container__footer__messageContent label {
     margin-bottom: 1rem;
 }
 
-.container__footer .container__footer__messageContent textarea{
+.container__footer .container__footer__messageContent textarea {
     border-radius: 0.5rem;
     border: 1px solid var(--Color_Green_600);
 }
 
-.container__footer .container__footer__consent{
+.container__footer .container__footer__consent {
     display: flex;
     align-items: center;
     gap: 1.5rem;
 }
 
-.container__footer .container__footer__consent label{
+.container__footer .container__footer__consent label {
     font-size: 1.6rem;
     color: var(--Color_Grey_900);
 
 }
 
-.buttonSubmit{
+.buttonSubmit {
     width: 100%;
     padding: 1.5rem;
     background-color: var(--Color_Green_600);
@@ -165,3 +165,39 @@ body {
     border: transparent;
     border-radius: 0.5rem;
 }
+
+
+/*============RESPONSIVIDADE_TABLET============*/
+@media(min-width:768px) {
+    .container {
+        width: min(70rem, 100%);
+    }
+
+    /*============CONTAINER__HEADER============*/
+    .container__header .container__header__namesContent {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .container__header .container__header__namesContent .container__header__namesContent__firstName,
+    .container__header__namesContent__lastName {
+        width: 100%;
+    }
+
+    /*============CONTAINER__SECTION============*/
+    .container__aside .container__aside__radioCheck {
+        flex-direction: row;
+        gap: 2rem;
+
+    }
+
+    .container__aside .container__aside__radioCheck .container__aside__radioCheck__General,
+    .container__aside__radioCheck__Support {
+        width: 100%;
+    }
+
+}
+
+
+/*============RESPONSIVIDADE_WEB============*/
