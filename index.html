@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,11 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/style.css">
   <title>Frontend Mentor | Contact form</title>
 
 </head>
@@ -22,47 +26,56 @@
           <h1>Contact Us</h1>
           <section class="container__header__namesContent">
             <div class="container__header__namesContent__firstName">
-              <label for="firstName" aria-required="true">First name</label>
+              <label for="firstName" aria-required="true">First name <strong>*</strong></label>
               <input type="text" name="firstName">
+              <span class="MessageError"></span>
             </div>
-            <p class="MessageError"></p>
             <div class="container__header__namesContent__lastName">
-              <label for="lastName" aria-required="true">Second name</label>
+              <label for="lastName" aria-required="true">Last name <strong>*</strong></label>
               <input type="text" name="lastName">
+              <span class="MessageError"></span>
             </div>
-            <p class="MessageError"></p>
           </section>
-          <label for="email" aria-required="true">Email Address</label>
-          <input type="email" name="email">
-          <p class="MessageErrorEmail"></p>
+          <div class="container__header__emailContent">
+            <label for="email" aria-required="true">Email Address <strong>*</strong></label>
+            <input type="email" name="email">
+            <span class="MessageError"></span>
+          </div>
         </header>
+
+
+        <aside class="container__aside">
+          <label class="query" for="Query" aria-required="true">Query Type <strong>*</strong></label>
+          <div class="container__aside__radioCheck">
+            <div class="container__aside__radioCheck__General">
+              <input type="radio" name="check" id="General_enquiry">
+              <label for="General_enquiry">General Enquiry</label>
+            </div>
+            <div class="container__aside__radioCheck__Support">
+              <input type="radio" name="check" id="Support_request">
+              <label for="Support_request">Support Request</label>
+            </div>
+            <span class="MessageError"></span>
+          </div>
+        </aside>
+
+        <footer class="container__footer">
+          <div class="container__footer__messageContent">
+            <label for="message" aria-required="true">Message <strong>*</strong></label>
+            <textarea name="message" rows="8" cols="15"></textarea>
+            <span class="MessageError"></span>
+          </div>
+          <div class="container__footer__consent">
+            <input type="checkbox" name="consentCheck" aria-required="true" id="consentCheck">
+            <label for="consentCheck">I consent to being contacted by the team *</label>
+            <span class="MessageError"></span>
+          </div>
+        </footer>
+
+        <input class="buttonSubmit" type="button" onclick="SandInformations()" value="Submit"> 
+        
+      </form>
     </div>
-
-    <aside class="container__aside">
-      <label for="check" aria-required="true">Query Type</label>
-      <div class="container__aside__radioCheck">
-        <input type="radio" name="check" placeholder="General Enquiry">
-        <input type="radio" name="check" placeholder="Support Request">
-      </div>
-      <p class="MessageErrorEmail"></p>
-    </aside>
-
-    <footer class="container__footer">
-      <div class="container__footer__messageContent">
-        <label for="message" aria-required="true">Message</label>
-        <textarea name="message" rows="8" cols="15"></textarea>
-      </div>
-      <p class="MessageErrorEmail"></p>
-      <div>
-        <label for="consentCheck"></label>
-        <input type="checkbox" name="consentCheck" placeholder="To submit this form, please consent to being contacted"
-          aria-required="true">
-      </div>
-      <p class="MessageErrorEmail"></p>
-    </footer>
-
-    <input type="submit" onclick="SandInformations()" placeholder="Submit">
-    </form>
   </main>
 </body>
 
