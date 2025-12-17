@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body onload="loadPage()">
 
   <main class="container">
     <div class="wrapper">
@@ -28,19 +28,21 @@
             <div class="container__header__namesContent__firstName">
               <label for="firstName" aria-required="true">First name <strong>*</strong></label>
               <input type="text" name="firstName">
+              <span class="MessageError">This field is required</span>
             </div>
             <div class="container__header__namesContent__lastName">
               <label for="lastName" aria-required="true">Last name <strong>*</strong></label>
               <input type="text" name="lastName">
+              <span class="MessageError">This field is required</span>
             </div>
           </section>
-          <span class="MessageError"></span>
+         
 
           <div class="container__header__emailContent">
             <label for="email" aria-required="true">Email Address <strong>*</strong></label>
             <input type="email" name="email">
+            <span class="MessageError">Please enter a valid email address</span>
           </div>
-          <span class="MessageError"></span>
         </header>
 
 
@@ -49,27 +51,30 @@
           <div class="container__aside__radioCheck">
             <div class="container__aside__radioCheck__General">
               <input type="radio" name="check" id="General_enquiry">
+              <span class="radioIcon"></span>
               <label for="General_enquiry">General Enquiry</label>
             </div>
             <div class="container__aside__radioCheck__Support">
               <input type="radio" name="check" id="Support_request">
+              <span class="radioIcon"></span>
               <label for="Support_request">Support Request</label>
             </div>
           </div>
-          <span class="MessageError"></span>
+          <span class="MessageError">Please select a query type</span>
         </aside>
 
         <footer class="container__footer">
           <div class="container__footer__messageContent">
             <label for="message" aria-required="true">Message <strong>*</strong></label>
             <textarea name="message" rows="8" cols="15"></textarea>
-            <span class="MessageError"></span>
+            <span class="MessageError">This field is required</span>
           </div>
           <div class="container__footer__consent">
             <input type="checkbox" name="consentCheck" aria-required="true" id="consentCheck">
+            <span class="checkbox"></span>
             <label for="consentCheck">I consent to being contacted by the team *</label>
           </div>
-          <span class="MessageError"></span>
+          <span class="MessageError"> to submit this form, please consent to being contacted</span>
         </footer>
 
         <input class="buttonSubmit" type="button" onclick="SandInformations()" value="Submit">
@@ -77,6 +82,9 @@
       </form>
     </div>
   </main>
+
+
+  <script src="./Script/script.js"></script>
 </body>
 
 </html>

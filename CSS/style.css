@@ -82,10 +82,12 @@ body {
 
 }
 
+
+
 .container__header input {
     border-radius: 0.5rem;
     padding: 1.2rem;
-    border: solid 1px var(--Color_Green_600);
+    border: solid 1px var(--Color_Grey_500);
 }
 
 .container__header label {
@@ -116,21 +118,49 @@ body {
     gap: 1rem;
     height: 4.1rem;
     padding-left: 1.5rem;
-    border: solid 1px var(--Color_Green_600);
+    border: solid 1px var(--Color_Grey_500);
     border-radius: 0.5rem;
 }
+
+.container__aside__radioCheck__General input {
+    display: none;
+}
+
+.container__aside__radioCheck__Support input {
+    display: none;
+}
+
+.radioIcon {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid var(--Color_Grey_500);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radioIcon::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
 
 /*============CONTAINER__FOOTER============*/
 .container__footer {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
     margin-top: 1rem;
 }
 
 .container__footer .container__footer__messageContent {
     display: flex;
     flex-direction: column;
+    margin-top: 3rem;
 
 }
 
@@ -140,13 +170,39 @@ body {
 
 .container__footer .container__footer__messageContent textarea {
     border-radius: 0.5rem;
-    border: 1px solid var(--Color_Green_600);
+    border: 1px solid var(--Color_Grey_500);
+    resize: none;
+    color: var(--Color_Grey_900);
+    padding: 2rem;
 }
 
 .container__footer .container__footer__consent {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    margin-top: 3rem;
+    
+}
+
+.container__footer .container__footer__consent input {
+    display: none;
+}
+
+.checkbox {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid var(--Color_Grey_500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
 }
 
 .container__footer .container__footer__consent label {
@@ -164,7 +220,76 @@ body {
     font-size: 1.6rem;
     border: transparent;
     border-radius: 0.5rem;
+    margin-top: 3rem;
 }
+
+/*============ATIVOS--FOCUS--HOVER============*/
+input:focus {
+    border: 2px solid var(--Color_Green_600);
+    outline: transparent;
+}
+
+.container__header input:hover{
+    cursor: pointer;
+}
+
+.container__aside__radioCheck__General label:hover{
+    cursor: pointer;
+}
+
+.container__aside__radioCheck__Support label:hover{
+    cursor: pointer;
+}
+.container__aside__radioCheck__General:has(input:checked),
+.container__aside__radioCheck__Support:has(input:checked) {
+    border: 2px solid var(--Color_Green_600);
+    background-color: var(--Color_Green_200);
+}
+
+
+.container__aside__radioCheck__General:has(input:checked) .radioIcon::after {
+    background-color: var(--Color_Green_600);
+}
+
+.container__aside__radioCheck__Support:has(input:checked) .radioIcon::after {
+    background-color: var(--Color_Green_600);
+}
+
+.container__footer__consent label:hover{
+    cursor: pointer;
+}
+
+.container__footer__consent:has(input:checked) .checkbox::after {
+    background-color: var(--Color_Green_600);
+}
+
+.container__footer .container__footer__messageContent textarea:hover{
+    cursor: pointer;
+}
+
+textarea:focus {
+    box-shadow: 0 0 0 1px var(--Color_Green_600);
+    outline: none;
+}
+
+/*============CONDIÇÃO - ERRORMESSAGE============*/
+.MessageError{
+    display: none;
+    font-size: 1.3rem;
+    color: var(--Color_Red);
+    margin-top: 1rem;
+}
+
+.MessageErrorShow{
+    display: block;
+}
+
+
+.inputError{
+    border: 2px solid var(--Color_Red);
+}
+
+
 
 
 /*============RESPONSIVIDADE_TABLET============*/
