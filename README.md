@@ -19,8 +19,8 @@ Esses desafios servem para o estudo e auto aprimoramento nas habilidades de dese
 - Por favor, veja o projeto pelo link acima para visualizar as animações e o formulario funcionando. Obrigado!
 
 ###  Versão Desktop
-![Texto Alternativo](../Projeto_completo/Versão%20Desktop%20.png)
+![Versão Desktop](./Versão%20Desktop%20.png)
 
 
 ###  Versão Mobile
-![Texto Alternativo](../Projeto_completo/Versão%20Mobile.png)
+![Versão Mobile](./Versão%20Mobile.png)
