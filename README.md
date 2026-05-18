@@ -18,10 +18,6 @@ Este foi um desenvolvimento de um projeto considerado nível junior de baixa / m
 Ainda aperfeiçoando os conhecimentos e especificamente o último projeto "Newsletter" https://github.com/IagoOliveiraF/Newsletter-page - com a criação de uma pequena validação.
 Este projeto foi desenvolvido pensando no preenchimento de um formulário, com validações um pouco mais complexas e animações de sucesso e erro.
 
-### Acesse o projeto, clicando neste link: [Link do projeto](https://iagooliveiraf.github.io/Newsletter-page/)
-### Página do Desafio: https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv
-
-  
 ### Acesse o projeto, clicando neste link: [Link do projeto](https://iagooliveiraf.github.io/Contact_Form/)
 ### Página do Desafio: https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj
 
