@@ -1,4 +1,4 @@
-# Este é um desafio do FrontendMentor - Recipe Page (Junior)
+# Este é um desafio do FrontendMentor - Contact Form (Junior)
 
 Esses desafios servem para o estudo e auto aprimoramento nas habilidades de desenvolvimento Front-End.
 
